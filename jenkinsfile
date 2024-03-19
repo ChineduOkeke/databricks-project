@@ -1,5 +1,5 @@
 node {
-  def GITREPOREMOTE = "https://github.com/<user-name>/<repo-name>.git"
+  def GITREPOREMOTE = "https://github.com/ChineduOkeke/databricks-project.git"
   def GITBRANCH     = "main"
   def DBCLIPATH     = "/usr/local/bin"
   def JQPATH        = "/usr/bin"
@@ -7,7 +7,7 @@ node {
   def BUNDLETARGET  = "dev"
 
   stage('Checkout') {
-    git branch: GITBRANCH, url: GITREPOREMOTE
+    git branch: main, url:https://github.com/ChineduOkeke/databricks-project.git databricks-project
   }
   stage('Validate Bundle') {
     sh """#!/bin/bash
